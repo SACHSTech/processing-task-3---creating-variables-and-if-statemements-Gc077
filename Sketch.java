@@ -97,10 +97,6 @@ public class Sketch extends PApplet {
 
     // Draw window
     rect(windowX, windowY, windowSize, windowSize);
-    
-
-	  
-	
   }
   
 }
