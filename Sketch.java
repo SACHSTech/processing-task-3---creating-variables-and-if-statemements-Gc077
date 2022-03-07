@@ -7,6 +7,7 @@ import processing.core.PApplet;
  * 
  */
 public class Sketch extends PApplet {
+
 	
   /**
    * Called once at the beginning of execution, put your size all in this method
@@ -15,7 +16,7 @@ public class Sketch extends PApplet {
     // Calling size function
     size(720, 500);
   }
-   
+
     // Declare and give value to variables 
     float buildingX = random(1, 620);
     float buildingY = random(250, 300);
@@ -35,7 +36,6 @@ public class Sketch extends PApplet {
     int s = second();  // Values from 0 - 59
     int m = minute();  // Values from 0 - 59
     int h = hour();    // Values from 0 - 23
-  
 
   /** 
    * Called once at the beginning of execution.  Add initial set up
@@ -51,6 +51,7 @@ public class Sketch extends PApplet {
     }
     if (sunX > 50 && sunX <= 70 || sunY >= 205) {
       background(253, 94, 83);
+
     }
     stroke(0);
   }
@@ -87,13 +88,17 @@ public class Sketch extends PApplet {
 
     // Draw the roof
     fill(0);
+
     triangle(buildingX, buildingY, roofX2, roofY2, roofX3, buildingY);
+
     
     // Draw the door 
     rect(doorX, doorY, doorSize, doorSize);
     
     // If and else statements for window colour
+
     if (sunX <= 70 || sunX >= 600 || sunY >= 205){
+
       fill(255, 255, 0);
     }
     else{
