@@ -7,8 +7,7 @@ import processing.core.PApplet;
  * 
  */
 public class Sketch extends PApplet {
-
-	
+  
   /**
    * Called once at the beginning of execution, put your size all in this method
    */
@@ -33,9 +32,9 @@ public class Sketch extends PApplet {
     float windowX = buildingX + (buildingSize / 6);
     float windowY = buildingY + (buildingSize / 6);
     float windowSize = buildingSize / 4;
-    int s = second();  // Values from 0 - 59
-    int m = minute();  // Values from 0 - 59
-    int h = hour();    // Values from 0 - 23
+    int intSecond = second();  // Values from 0 - 59
+    int intMinute = minute();  // Values from 0 - 59
+    int intHour = hour();    // Values from 0 - 23
 
   /** 
    * Called once at the beginning of execution.  Add initial set up
@@ -116,9 +115,8 @@ public class Sketch extends PApplet {
       fill(0);
     }
     textSize(35);
-    text(+h+ ":", 30, 60);   
-    text(+m+ ":", 80, 60);   
-    text(+s, 130, 60);
+    text(+intHour+ ":" +intMinute+ ":" +intSecond, 30, 60);   
+
   }
   
 }
