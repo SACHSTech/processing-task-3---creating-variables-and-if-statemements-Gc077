@@ -108,9 +108,17 @@ public class Sketch extends PApplet {
     // Draw window
     rect(windowX, windowY, windowSize, windowSize);
 
-    text(+s, 50, 100);
-    text(+m+ ":", 30, 100);
-    text(+h+ ":", 10, 100);
+    // If statements for diplaying time 
+    if (sunX <= 50 || sunX > 600 && sunY < 205){
+      fill(255);
+    }
+    else{
+      fill(0);
+    }
+    textSize(35);
+    text(+h+ ":", 30, 60);   
+    text(+m+ ":", 80, 60);   
+    text(+s, 130, 60);
   }
   
 }
